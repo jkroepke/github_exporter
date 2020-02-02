@@ -1,0 +1,30 @@
+{
+  "name": "github-exporter",
+  "version": "0.0.1",
+  "description": "Export various metrics including insights about github repositories",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github:jkroepke/github-exporter.git"
+  },
+  "keywords": [
+    "github"
+  ],
+  "author": {
+    "name": "Jan-Otto Kröpke",
+    "email": "npm@jkropke.de",
+    "url": "https://github.com/jkroepke/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jkroepke/github-exporter/issues"
+  },
+  "homepage": "https://github.com/jkroepke/github-exporter#readme",
+  "dependencies": {
+    "prom-client": "^11.5.3",
+    "request": "^2.88.0"
+  }
+}
