@@ -20,9 +20,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jkroepke/github-exporter/issues"
+    "url": "https://github.com/jkroepke/github_exporter/issues"
   },
-  "homepage": "https://github.com/jkroepke/github-exporter#readme",
+  "homepage": "https://github.com/jkroepke/github_exporter#readme",
   "dependencies": {
     "prom-client": "^11.5.3",
     "request": "^2.88.0"
