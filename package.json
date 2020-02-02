@@ -1,5 +1,5 @@
 {
-  "name": "github-exporter",
+  "name": "github_exporter",
   "version": "0.0.1",
   "description": "Export various metrics including insights about github repositories",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "github:jkroepke/github-exporter.git"
+    "url": "github:jkroepke/github_exporter.git"
   },
   "keywords": [
     "github"
