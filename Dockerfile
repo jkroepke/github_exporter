@@ -6,7 +6,7 @@ RUN apk add --no-cache tini
 
 WORKDIR /opt/github_exporter
 
-COPY package*.json .
+COPY package*.json ./
 
 RUN npm install --production --quiet
 

@@ -4,13 +4,15 @@
   "description": "Export various metrics including insights about github repositories",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 0",
     "lint": "eslint index.js lib/*.js"
   },
   "files": [
     "index.js",
     "lib/*.js"
   ],
+  "bin": "index.js",
   "repository": {
     "type": "git",
     "url": "github:jkroepke/github_exporter.git"
@@ -39,13 +41,14 @@
   },
   "homepage": "https://github.com/jkroepke/github_exporter#readme",
   "dependencies": {
+    "@octokit/graphql": "^4.3.1",
+    "@octokit/plugin-retry": "^3.0.1",
+    "@octokit/plugin-throttling": "^3.2.0",
     "@octokit/rest": "^16.38.3",
-    "array.prototype.flat": "^1.2.3",
+    "async-each": "^1.0.3",
     "dotenv": "^8.2.0",
-    "interval-promise": "^1.4.0",
     "prom-client": "^11.5.3",
-    "request": "^2.88.0",
-    "request-promise-native": "^1.0.8",
+    "run-parallel": "^1.1.9",
     "yargs": "^15.1.0"
   },
   "devDependencies": {
