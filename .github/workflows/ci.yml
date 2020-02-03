@@ -1,8 +1,9 @@
 name: CI
 on:
-  push:
+  - push:
     - master
-  pull_request:
+  - pull_request:
+
 jobs:
   run:
     runs-on: ubuntu-latest
