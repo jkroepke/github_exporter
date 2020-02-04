@@ -10,7 +10,6 @@ const Octokit = require('@octokit/rest').plugin([
   require('@octokit/plugin-retry').retry,
   require('@octokit/plugin-throttling').throttling,
 ]);
-
 /* eslint-enable global-require */
 
 const { argv } = require('./lib/args');
