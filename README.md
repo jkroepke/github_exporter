@@ -6,6 +6,7 @@
 ![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/github_exporter)
 ![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/github_exporter)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c0b5bc1d4725a1b6bd8c/maintainability)](https://codeclimate.com/github/jkroepke/github_exporter/maintainability)
+[![codecov](https://codecov.io/gh/jkroepke/github_exporter/branch/master/graph/badge.svg)](https://codecov.io/gh/jkroepke/github_exporter)
 
 # github-exporter
 Export various metrics including insights about github repositories
