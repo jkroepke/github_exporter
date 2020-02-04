@@ -5,10 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "coverage": "nyc npm run test",
-    "unit-test": "mocha",
-    "test": "npm run unit-test",
-    "lint": "eslint index.js lib/*.js test/*.js"
+    "lint": "eslint index.js lib/*.js test/*.js",
+    "test": "npm run test:unit",
+    "test:unit": "mocha",
+    "test:integration": "echo",
+    "coverage": "npm run coverage:unit && npm run coverage:integration && npm run coverage:report",
+    "coverage:unit": "nyc --silent npm run test:unit",
+    "coverage:integration": "nyc --silent --no-clean npm run test:integration",
+    "coverage:report": "nyc report --reporter=lcov --reporter=text"
   },
   "files": [
     "index.js",
