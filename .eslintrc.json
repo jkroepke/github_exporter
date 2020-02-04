@@ -2,7 +2,8 @@
     "env": {
         "commonjs": true,
         "es6": true,
-        "node": true
+        "node": true,
+        "mocha": true
     },
     "extends": [
         "airbnb-base"
@@ -16,5 +17,25 @@
     },
     "rules": {
         "no-console": "off"
-    }
+    },
+    "overrides": [
+        {
+            "files": [
+                "test/*.js"
+            ],
+            "plugins": [
+                "mocha"
+            ],
+            "extends": [
+                "plugin:mocha/recommended"
+            ],
+            "rules": {
+                "func-names": "off",
+                "prefer-arrow-callback": "off",
+                "mocha/prefer-arrow-callback": "error",
+                "mocha/no-exclusive-tests": "error",
+                "mocha/no-pending-tests": "error"
+            }
+        }
+    ]
 }

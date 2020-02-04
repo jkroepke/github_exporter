@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "coverage": "npm run test",
-    "test": "echo \"Error: no test specified\"",
-    "lint": "eslint index.js lib/*.js"
+    "coverage": "nyc npm run test",
+    "test": "mocha",
+    "lint": "eslint index.js lib/*.js tests/*.js"
   },
   "files": [
     "index.js",
@@ -55,6 +55,9 @@
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.20.0"
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-mocha": "^6.2.2",
+    "mocha": "^7.0.1",
+    "nyc": "^15.0.0"
   }
 }
