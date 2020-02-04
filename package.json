@@ -6,8 +6,9 @@
   "scripts": {
     "start": "node index.js",
     "coverage": "nyc npm run test",
-    "test": "mocha",
-    "lint": "eslint index.js lib/*.js tests/*.js"
+    "unit-test": "mocha",
+    "test": "npm run unit-test",
+    "lint": "eslint index.js lib/*.js test/*.js"
   },
   "files": [
     "index.js",
