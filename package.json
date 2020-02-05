@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "lint": "eslint index.js lib/*.js test/*.js",
+    "lint": "eslint index.js lib/**/*.js test/*.js",
     "test": "npm run test:unit",
     "test:unit": "mocha",
     "test:integration": "echo",
@@ -16,7 +16,7 @@
   },
   "files": [
     "index.js",
-    "lib/*.js"
+    "lib/**/*.js"
   ],
   "bin": "index.js",
   "repository": {
@@ -48,13 +48,12 @@
   "homepage": "https://github.com/jkroepke/github_exporter#readme",
   "dependencies": {
     "@octokit/graphql": "^4.3.1",
-    "@octokit/plugin-retry": "^3.0.1",
-    "@octokit/plugin-throttling": "^3.2.0",
     "@octokit/rest": "^16.38.3",
     "async-each": "^1.0.3",
     "dotenv": "^8.2.0",
     "prom-client": "^11.5.3",
     "run-parallel": "^1.1.9",
+    "winston": "^3.2.1",
     "yargs": "^15.1.0"
   },
   "devDependencies": {

@@ -3,56 +3,10 @@ require('dotenv').config();
 
 const http = require('http');
 
-const { graphql } = require('@octokit/graphql');
-
-/* eslint-disable global-require */
-const Octokit = require('@octokit/rest').plugin([
-  require('@octokit/plugin-retry').retry,
-  require('@octokit/plugin-throttling').throttling,
-]);
-/* eslint-enable global-require */
-
 const { argv } = require('./lib/args');
-const Scraper = require('./lib/scraper');
+const scraper = require('./lib/scraper');
 const metrics = require('./lib/metrics');
-
-const { version } = require('./package.json');
-
-const octokit = new Octokit({
-  auth: argv.token,
-  userAgent: `jkroepke/github_exporter v${version}`,
-  throttle: {
-    onRateLimit: (retryAfter, options) => {
-      console.warn(`Request quota exhausted for request ${options.method} ${options.url}`);
-
-      if (options.request.retryCount === 0) { // only retries once
-        console.log(`Retrying after ${retryAfter} seconds!`);
-        return true;
-      }
-
-      return null;
-    },
-    onAbuseLimit: (retryAfter, options) => {
-      // does not retry, only logs a warning
-      console.warn(`Abuse detected for request ${options.method} ${options.url}`);
-    },
-  },
-});
-
-const graphqlWithAuth = graphql.defaults({
-  headers: {
-    authorization: `token ${argv.token}`,
-    'user-agent': `jkroepke/github_exporter v${version}`,
-  },
-  mediaType: {
-    previews: [
-      'packages',
-      'hawkgirl', // Repositories Dependency Graph
-    ],
-  },
-});
-
-const metricsInterval = metrics.Prometheus.collectDefaultMetrics();
+const logger = require('./lib/logger');
 
 const server = http.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': metrics.Prometheus.register.contentType });
@@ -60,33 +14,32 @@ const server = http.createServer((req, res) => {
   res.end();
 });
 
-server.listen(argv.port, argv.listen, (err) => {
+server.listen(argv.port, argv.host, (err) => {
   if (err) {
-    console.error(`Unable to listen on ${argv.listen}:${argv.port}`, err);
+    logger.error(`Unable to listen on ${argv.host}:${argv.port}`, err);
+    logger.verbose(err);
     return;
   }
-  console.log(`Listen on ${argv.listen}:${argv.port}`);
+
+  logger.info(`Listen on ${argv.host}:${argv.port}`);
 });
 
-const scraper = new Scraper(metrics, octokit, graphqlWithAuth);
-scraper.setInterval(argv.interval * 1000);
-scraper.setSpread(argv.spread);
-
 argv.organization.forEach((organization) => {
-  scraper.initScrapeOrganization(organization);
+  scraper.initScrapeOrganization(organization, argv.interval * 1000, argv.spread);
 });
 
 if (argv.repository.length !== 0) {
-  scraper.initScrapeRepositories(argv.repository);
+  scraper.intiScrapeRepositories(argv.repository, argv.interval * 1000, argv.spread);
 }
 
 // Graceful shutdown
 process.on('SIGTERM', () => {
-  clearInterval(metricsInterval);
+  clearInterval(metrics.metricsInterval);
 
   server.close((err) => {
     if (err) {
-      console.error(err);
+      logger.error(`Failed to stop server: ${err.message}`);
+      logger.verbose(err);
       process.exit(1);
     }
 
