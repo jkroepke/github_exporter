@@ -1,0 +1,17 @@
+volumes: 3
+services:
+  github_exporter:
+    image: jkroepke/github_exporter
+    restart: always
+    ports:
+    - 9171:9171
+    networks:
+    - github_exporter
+    environment:
+      GITHUB_EXPORTER_TOKEN: <secret>
+      GITHUB_EXPORTER_ORGANIZATION: org1,org2
+      GITHUB_EXPORTER_USER: user1,user2
+      GITHUB_EXPORTER_REPOSITORY: jkroepke/github_exporter,jkroepke/2Moons
+
+networks:
+  github_exporter:

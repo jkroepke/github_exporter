@@ -3,14 +3,17 @@ require('dotenv').config();
 
 const http = require('http');
 
+const Prometheus = require('prom-client');
+
 const { argv } = require('./lib/args');
 const scraper = require('./lib/scraper');
-const metrics = require('./lib/metrics');
 const logger = require('./lib/logger');
 
+const metricsInterval = Prometheus.collectDefaultMetrics();
+
 const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': metrics.Prometheus.register.contentType });
-  res.write(metrics.Prometheus.register.metrics());
+  res.writeHead(200, { 'Content-Type': Prometheus.register.contentType });
+  res.write(Prometheus.register.metrics());
   res.end();
 });
 
@@ -24,6 +27,8 @@ server.listen(argv.port, argv.host, (err) => {
   logger.info(`Listen on ${argv.host}:${argv.port}`);
 });
 
+scraper.initScrapeGlobal(argv.interval * 1000, argv.spread);
+
 argv.organization.forEach((organization) => {
   scraper.initScrapeOrganization(organization, argv.interval * 1000, argv.spread);
 });
@@ -34,7 +39,7 @@ if (argv.repository.length !== 0) {
 
 // Graceful shutdown
 process.on('SIGTERM', () => {
-  clearInterval(metrics.metricsInterval);
+  clearInterval(metricsInterval);
 
   server.close((err) => {
     if (err) {
