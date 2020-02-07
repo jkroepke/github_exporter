@@ -1,16 +1,15 @@
 FROM node:lts-alpine
 
-ENV NODE_ENV=production
+EXPOSE 9171
 
-RUN apk add --no-cache tini
+ENV NODE_ENV=production
 
 WORKDIR /opt/github_exporter
 
-COPY package*.json ./
-
-RUN npm install --production --quiet
-
 COPY . .
+
+RUN apk add --no-cache tini && \
+  npm install --production --quiet
 
 USER 1001
 
