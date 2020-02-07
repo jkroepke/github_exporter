@@ -7,6 +7,9 @@
 ![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/github_exporter)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c0b5bc1d4725a1b6bd8c/maintainability)](https://codeclimate.com/github/jkroepke/github_exporter/maintainability)
 [![codecov](https://codecov.io/gh/jkroepke/github_exporter/branch/master/graph/badge.svg)](https://codecov.io/gh/jkroepke/github_exporter)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 
 # github_exporter
 Export various metrics including insights about github repositories from the GitHub API,
@@ -130,6 +133,9 @@ A [compose file](./docker-compose.yml) is available, too.
 # HELP github_repo_traffic_unique_vistors Total unique views from top 10 content for given repository
 # TYPE github_repo_traffic_unique_vistors gauge
 ```
+
+## Contributing
+See [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 ## Authors
 * [Jan-Otto Kröpke](https://github.com/jkroepke)

@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "lint": "eslint index.js lib/**/*.js test/*.js",
+    "commit": "npx git-cz",
     "test": "npm run test:unit",
     "test:unit": "mocha",
     "test:integration": "echo",
@@ -49,19 +50,25 @@
   "dependencies": {
     "@octokit/graphql": "^4.3.1",
     "@octokit/rest": "^16.38.3",
-    "async-each": "^1.0.3",
     "dotenv": "^8.2.0",
     "prom-client": "^11.5.3",
-    "run-parallel": "^1.1.9",
     "winston": "^3.2.1",
     "yargs": "^15.1.0"
   },
   "devDependencies": {
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-mocha": "^6.2.2",
     "mocha": "^7.0.1",
-    "nyc": "^15.0.0"
+    "nyc": "^15.0.0",
+    "semantic-release": "^17.0.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
