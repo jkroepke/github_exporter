@@ -61,7 +61,7 @@ More information:
 
 ## Start the exporter
 
-Manually docker:
+### Docker:
 
 ```bash
 docker run --name github_exporter -d \
@@ -74,6 +74,13 @@ docker run --name github_exporter -d \
 ```
 
 A [compose file](./docker-compose.yml) is available, too.
+
+### node package manager
+```bash
+npm install -g github_exporter
+
+github_exporter --token --repository=kroepke/github_exporter
+```
 
 ## Metrics
 
