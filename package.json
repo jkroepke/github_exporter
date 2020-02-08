@@ -56,6 +56,8 @@
     "yargs": "^15.1.0"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^5.0.0",
+    "@semantic-release/git": "^9.0.0",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^3.1.0",
     "eslint": "^6.8.0",
@@ -70,5 +72,15 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      "@semantic-release/git",
+      "@semantic-release/changelog"
+    ]
   }
 }
