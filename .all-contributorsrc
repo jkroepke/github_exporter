@@ -1,0 +1,26 @@
+{
+  "projectName": "github_exporter",
+  "projectOwner": "jkroepke",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "jkroepke",
+      "name": "Jan-Otto Kröpke",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1560587?v=4",
+      "profile": "https://github.com/jkroepke",
+      "contributions": [
+        "code",
+        "maintenance",
+        "infra"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}

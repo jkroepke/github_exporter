@@ -1,4 +1,7 @@
 [![NPM](https://img.shields.io/npm/l/github_exporter)](https://www.npmjs.com/package/github_exporter)
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 [![CI](https://github.com/jkroepke/github_exporter/workflows/CI/badge.svg)](https://github.com/jkroepke/github_exporter)
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/jkroepke/github_exporter?logo=docker)](https://hub.docker.com/r/jkroepke/github_exporter)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
@@ -9,7 +12,8 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/jkroepke/github_exporter?logo=docker)](https://hub.docker.com/r/jkroepke/github_exporter)
 [![Docker Stars](https://img.shields.io/docker/stars/jkroepke/github_exporter?logo=docker)](https://hub.docker.com/r/jkroepke/github_exporter)
 
-[![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/github_exporter)](https://libraries.io/github/jkroepke/github_exporter)
+[![dependencies Status](https://david-dm.org/jkroepke/github_exporter/status.svg)](https://david-dm.org/jkroepke/github_exporter)
+[![devDependencies Status](https://david-dm.org/jkroepke/github_exporter/dev-status.svg)](https://david-dm.org/jkroepke/github_exporter?type=dev)
 [![Known Vulnerabilities](https://snyk.io/test/github/jkroepke/github_exporter/badge.svg?targetFile=package.json)](https://snyk.io/test/github/jkroepke/github_exporter?targetFile=package.json)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c0b5bc1d4725a1b6bd8c/maintainability)](https://codeclimate.com/github/jkroepke/github_exporter/maintainability)
 [![codecov](https://codecov.io/gh/jkroepke/github_exporter/branch/master/graph/badge.svg)](https://codecov.io/gh/jkroepke/github_exporter)
@@ -205,6 +209,25 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md)
 ## Authors
 * [Jan-Otto Kröpke](https://github.com/jkroepke)
 
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/jkroepke"><img src="https://avatars3.githubusercontent.com/u/1560587?v=4" width="100px;" alt=""/><br /><sub><b>Jan-Otto Kröpke</b></sub></a><br /><a href="https://github.com/jkroepke/github_exporter/commits?author=jkroepke" title="Code">💻</a> <a href="#maintenance-jkroepke" title="Maintenance">🚧</a> <a href="#infra-jkroepke" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
 ## License
 
-MIT Licence
+[MIT Licence](LICENSE)
