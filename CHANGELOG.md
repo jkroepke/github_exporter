@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/jkroepke/github_exporter/compare/v1.3.0...v1.4.0) (2020-02-08)
+
+
+### Features
+
+* implement owner label on all labels ([6b9e0d0](https://github.com/jkroepke/github_exporter/commit/6b9e0d0274eaba1cd08bf2002d27a8ae6f1322af))
+
 # [1.3.0](https://github.com/jkroepke/github_exporter/compare/v1.2.0...v1.3.0) (2020-02-08)
 
 
