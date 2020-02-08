@@ -132,6 +132,8 @@ A [compose file](./docker-compose.yml) is available, too.
 # TYPE github_repo_traffic_views gauge
 # HELP github_repo_traffic_unique_vistors Total unique views from top 10 content for given repository
 # TYPE github_repo_traffic_unique_vistors gauge
+# HELP github_repo_vulnerabilities_total vulnerabilities for given repository
+# TYPE github_repo_vulnerabilities_total gauge
 ```
 
 ## Contributing
