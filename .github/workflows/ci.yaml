@@ -8,7 +8,7 @@ on:
       - 'README.md'
 
 jobs:
-  run:
+  app:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
@@ -30,3 +30,10 @@ jobs:
       with:
         coverageCommand: npm run coverage
         debug: true
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - run: docker build -t jkroepke/github_exporter .
+      - run: docker run --rm jkroepke/github_exporter --version

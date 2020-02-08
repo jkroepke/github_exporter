@@ -13,5 +13,4 @@ RUN apk add --no-cache tini && \
 
 USER 1001
 
-ENTRYPOINT ["/sbin/tini", "--"]
-CMD ["/opt/github_exporter/index.js"]
+ENTRYPOINT ["/sbin/tini", "--", "/opt/github_exporter/index.js"]
