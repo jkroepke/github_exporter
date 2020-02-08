@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+# https://docs.docker.com/docker-hub/builds/advanced/
+echo "------ HOOK START - BUILD -------"
+
+docker build \
+  --build-arg VERSION="${DOCKER_TAG/v}" \
+  --build-arg BUILD_DATE="$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
+  --build-arg VCS_REF="${SOURCE_COMMIT}" \
+  -f "${DOCKERFILE_PATH}" \
+  -t "${IMAGE_NAME}" .
+
+echo "------ HOOK END - BUILD -------"
