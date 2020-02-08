@@ -1,3 +1,11 @@
+## [1.4.1](https://github.com/jkroepke/github_exporter/compare/v1.4.0...v1.4.1) (2020-02-08)
+
+
+### Bug Fixes
+
+* grafana needs ms timestamp ([8bb0b92](https://github.com/jkroepke/github_exporter/commit/8bb0b92248133c59c5678f77c187d325664f1fe7))
+* return metrics only on GET /metrics ([81d614c](https://github.com/jkroepke/github_exporter/commit/81d614c1e394df7cf492c673a38c47c752e26555))
+
 # [1.4.0](https://github.com/jkroepke/github_exporter/compare/v1.3.0...v1.4.0) (2020-02-08)
 
 
