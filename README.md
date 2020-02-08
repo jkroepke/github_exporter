@@ -1,11 +1,13 @@
 [![NPM](https://img.shields.io/npm/l/github_exporter)](https://www.npmjs.com/package/github_exporter)
 [![CI](https://github.com/jkroepke/github_exporter/workflows/CI/badge.svg)](https://github.com/jkroepke/github_exporter)
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/jkroepke/github_exporter?logo=docker)](https://hub.docker.com/r/jkroepke/github_exporter)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 [![npm](https://img.shields.io/npm/v/github_exporter)](https://www.npmjs.com/package/github_exporter)
 [![npm](https://img.shields.io/npm/dm/github_exporter)](https://www.npmjs.com/package/github_exporter)
-[![Docker Pulls](https://img.shields.io/docker/pulls/jkroepke/github_exporter)](https://hub.docker.com/r/jkroepke/github_exporter)
+[![Docker Pulls](https://img.shields.io/docker/pulls/jkroepke/github_exporter?logo=docker)](https://hub.docker.com/r/jkroepke/github_exporter)
+[![Docker Stars](https://img.shields.io/docker/stars/jkroepke/github_exporter?logo=docker)](https://hub.docker.com/r/jkroepke/github_exporter)
 
 [![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/github_exporter)](https://libraries.io/github/jkroepke/github_exporter)
 [![Known Vulnerabilities](https://snyk.io/test/github/jkroepke/github_exporter/badge.svg?targetFile=package.json)](https://snyk.io/test/github/jkroepke/github_exporter?targetFile=package.json)
