@@ -68,6 +68,7 @@
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-mocha": "^6.2.2",
     "husky": "^4.2.1",
+    "lint-staged": "^10.0.7",
     "mocha": "^7.0.1",
     "nyc": "^15.0.0",
     "semantic-release": "^17.0.2"
@@ -79,8 +80,12 @@
   },
   "husky": {
     "hooks": {
+      "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "lint-staged": {
+    "*.js": ["npm run lint -- --fix"]
   },
   "release": {
     "plugins": [
