@@ -1,5 +1,0 @@
-fragment repositoryFragment on Repository {
-  vulnerabilityAlerts(first: 0) {
-    totalCount
-  }
-}
