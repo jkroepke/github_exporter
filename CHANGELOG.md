@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/jkroepke/github_exporter/compare/v1.2.0...v1.3.0) (2020-02-08)
+
+
+### Features
+
+* implement language sizes ([f61da83](https://github.com/jkroepke/github_exporter/commit/f61da83d2e5e33f4b49af5edaf6e5a0ccd9a9af9))
+
 # [1.2.0](https://github.com/jkroepke/github_exporter/compare/v1.1.2...v1.2.0) (2020-02-08)
 
 
