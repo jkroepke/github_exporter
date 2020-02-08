@@ -1,6 +1,7 @@
 {
   "projectName": "github_exporter",
   "projectOwner": "jkroepke",
+  "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-orange.svg)](#contributors-)",
   "repoType": "github",
   "repoHost": "https://github.com",
   "files": [
