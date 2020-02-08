@@ -2,6 +2,7 @@
 require('dotenv').config();
 
 const http = require('http');
+const url = require('url');
 
 const Prometheus = require('prom-client');
 
@@ -12,8 +13,24 @@ const logger = require('./lib/logger');
 const metricsInterval = Prometheus.collectDefaultMetrics();
 
 const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': Prometheus.register.contentType });
-  res.write(Prometheus.register.metrics());
+  switch (url.parse(req.url).pathname) {
+    case '/metrics':
+      res.writeHead(200, { 'Content-Type': Prometheus.register.contentType });
+      res.write(Prometheus.register.metrics());
+      break;
+    case '/health':
+      res.writeHead(200);
+      res.write('OK');
+      break;
+    case '/':
+      res.writeHead(302, { Location: '/metrics' });
+      res.write('OK');
+      break;
+    default:
+      res.writeHead(404);
+      break;
+  }
+
   res.end();
 });
 
