@@ -1,25 +1,26 @@
-![CI](https://github.com/jkroepke/github_exporter/workflows/CI/badge.svg)
 [![NPM](https://img.shields.io/npm/l/github_exporter)](https://www.npmjs.com/package/github_exporter)
+![CI](https://github.com/jkroepke/github_exporter/workflows/CI/badge.svg)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 [![npm](https://img.shields.io/npm/v/github_exporter)](https://www.npmjs.com/package/github_exporter)
 [![npm](https://img.shields.io/npm/dm/github_exporter)](https://www.npmjs.com/package/github_exporter)
 [![Docker Pulls](https://img.shields.io/docker/pulls/jkroepke/github_exporter)](https://hub.docker.com/r/jkroepke/github_exporter)
+
 [![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/github_exporter)](https://libraries.io/github/jkroepke/github_exporter)
 [![Known Vulnerabilities](https://snyk.io/test/github/jkroepke/github_exporter/badge.svg?targetFile=package.json)](https://snyk.io/test/github/jkroepke/github_exporter?targetFile=package.json)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c0b5bc1d4725a1b6bd8c/maintainability)](https://codeclimate.com/github/jkroepke/github_exporter/maintainability)
 [![codecov](https://codecov.io/gh/jkroepke/github_exporter/branch/master/graph/badge.svg)](https://codecov.io/gh/jkroepke/github_exporter)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-
 
 # github_exporter
-Export various metrics including insights about github repositories from the GitHub API,
+Export various metrics including insights and traffic metrics about github repositories from the GitHub API,
 to a Prometheus compatible endpoint.
 
 ## About rate limits and abuse warnings
 
-github_exporter use GitHub [GraphQL API V4](https://developer.github.com/v4/) and [REST API V3](https://developer.github.com/v3/).
+[github_exporter](https://github.com/jkroepke/github_exporter) use GitHub [GraphQL API V4](https://developer.github.com/v4/) and [REST API V3](https://developer.github.com/v3/).
 
-Both APIs have a separate rate-limit. By default 5000 requests/hour with an personal access token.
+Both APIs have a separate rate-limit. The default limit is 5000 requests/hour with an personal access token.
 
 To prevent rate limit or abuse errors I highly recommend to configure a higher scrape interval.
 If you are still in trouble you also should enable the spread parameter to spread requests across the
@@ -28,6 +29,16 @@ scrape interval.
 More information:
 * https://developer.github.com/v3/#rate-limiting
 * https://developer.github.com/v4/guides/resource-limitations/
+
+### GitHub Token
+
+A Github token is highly recommend.
+
+How to get an token: https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line#creating-a-token
+
+More information:
+- https://developer.github.com/v3/#authentication
+- https://developer.github.com/v4/guides/forming-calls/#authenticating-with-graphql
 
 ## Usage
 
@@ -64,15 +75,12 @@ Environment variable support. Prefix: GITHUB_EXPORTER, e.g. --token == GITHUB_EX
 for more information, find our manual at https://github.com/jkroepke/github_exporter
 ```
 
-### GitHub Token
+### .env file config
+If case you don't want to define certain options like secrets you can define
+them in a `.env` file.
 
-A Github token is highly recommend.
-
-How to get an token=https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line#creating-a-token
-
-More information:
-- https://developer.github.com/v3/#authentication
-- https://developer.github.com/v4/guides/forming-calls/#authenticating-with-graphql
+More information about `.env` file:
+- https://github.com/motdotla/dotenv#usage
 
 ## Start the exporter
 

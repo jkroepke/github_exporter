@@ -11,7 +11,7 @@ HELP="$(node index.js --help)"
   echo "${HELP}"
   echo '```';
   echo '';
-  sed -ne '/## GitHub Token/,$ p' README.md;
+  sed -ne '/### .env file config/,$ p' README.md;
 } > "${MKTEMP}"
 
 mv "${MKTEMP}" README.md
