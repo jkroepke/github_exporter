@@ -1,4 +1,4 @@
-
+![CI](https://github.com/jkroepke/github_exporter/workflows/CI/badge.svg)
 [![NPM](https://img.shields.io/npm/l/github_exporter)](https://www.npmjs.com/package/github_exporter)
 [![npm](https://img.shields.io/npm/v/github_exporter)](https://www.npmjs.com/package/github_exporter)
 [![npm](https://img.shields.io/npm/dm/github_exporter)](https://www.npmjs.com/package/github_exporter)
