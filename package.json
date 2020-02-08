@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "lint": "eslint *.js lib/**/*.js test/*.js",
+    "lint": "standard",
     "cm": "npx git-cz",
     "test": "npm run test:unit",
     "test:unit": "mocha",
@@ -63,15 +63,13 @@
     "@semantic-release/git": "^9.0.0",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^3.1.0",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.20.0",
-    "eslint-plugin-mocha": "^6.2.2",
     "husky": "^4.2.1",
     "lint-staged": "^10.0.7",
     "mocha": "^7.0.1",
     "nyc": "^15.0.0",
-    "semantic-release": "^17.0.2"
+    "semantic-release": "^17.0.2",
+    "snazzy": "^8.0.0",
+    "standard": "^14.3.1"
   },
   "config": {
     "commitizen": {
@@ -87,6 +85,11 @@
   "lint-staged": {
     "*.js": [
       "npm run lint -- --fix"
+    ]
+  },
+  "standard": {
+    "env": [
+      "mocha"
     ]
   },
   "release": {

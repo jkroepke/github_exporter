@@ -1,74 +1,74 @@
 #!/usr/bin/env node
-require('dotenv').config();
+require('dotenv').config()
 
-const http = require('http');
-const url = require('url');
+const http = require('http')
 
-const Prometheus = require('prom-client');
+const Prometheus = require('prom-client')
 
-const { argv } = require('./lib/args');
-const scraper = require('./lib/scraper');
-const logger = require('./lib/logger');
+const { argv } = require('./lib/args')
+const scraper = require('./lib/scraper')
+const logger = require('./lib/logger')
 
-const metricsInterval = Prometheus.collectDefaultMetrics();
+const metricsInterval = Prometheus.collectDefaultMetrics()
 
 const server = http.createServer((req, res) => {
-  switch (url.parse(req.url).pathname) {
+  const path = new URL(req.url).pathname
+  switch (path) {
     case '/metrics':
-      res.writeHead(200, { 'Content-Type': Prometheus.register.contentType });
-      res.write(Prometheus.register.metrics());
-      break;
+      res.writeHead(200, { 'Content-Type': Prometheus.register.contentType })
+      res.write(Prometheus.register.metrics())
+      break
     case '/health':
-      res.writeHead(200);
-      res.write('OK');
-      break;
+      res.writeHead(200)
+      res.write('OK')
+      break
     case '/':
-      res.writeHead(302, { Location: '/metrics' });
-      res.write('OK');
-      break;
+      res.writeHead(302, { Location: '/metrics' })
+      res.write('OK')
+      break
     default:
-      res.writeHead(404);
-      break;
+      res.writeHead(404)
+      break
   }
 
-  res.end();
-});
+  res.end()
+})
 
 server.listen(argv.port, argv.host, (err) => {
   if (err) {
-    logger.error(`Unable to listen on ${argv.host}:${argv.port}`, err);
-    logger.verbose(err);
-    return;
+    logger.error(`Unable to listen on ${argv.host}:${argv.port}`, err)
+    logger.verbose(err)
+    return
   }
 
-  logger.info(`Listen on ${argv.host}:${argv.port}`);
-});
+  logger.info(`Listen on ${argv.host}:${argv.port}`)
+})
 
-scraper.initScrapeGlobal(argv.interval * 1000, argv.spread);
+scraper.initScrapeGlobal(argv.interval * 1000, argv.spread)
 
 argv.organization.forEach((organization) => {
-  scraper.initScrapeOrganization(organization, argv.interval * 1000, argv.spread);
-});
+  scraper.initScrapeOrganization(organization, argv.interval * 1000, argv.spread)
+})
 
 argv.user.forEach((username) => {
-  scraper.initScrapeUser(username, argv.interval * 1000, argv.spread);
-});
+  scraper.initScrapeUser(username, argv.interval * 1000, argv.spread)
+})
 
 if (argv.repository.length !== 0) {
-  scraper.intiScrapeRepositories(argv.repository, argv.interval * 1000, argv.spread);
+  scraper.intiScrapeRepositories(argv.repository, argv.interval * 1000, argv.spread)
 }
 
 // Graceful shutdown
 process.on('SIGTERM', () => {
-  clearInterval(metricsInterval);
+  clearInterval(metricsInterval)
 
   server.close((err) => {
     if (err) {
-      logger.error(`Failed to stop server: ${err.message}`);
-      logger.verbose(err);
-      process.exit(1);
+      logger.error(`Failed to stop server: ${err.message}`)
+      logger.verbose(err)
+      process.exit(1)
     }
 
-    process.exit(0);
-  });
-});
+    process.exit(0)
+  })
+})
