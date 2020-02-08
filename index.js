@@ -33,6 +33,10 @@ argv.organization.forEach((organization) => {
   scraper.initScrapeOrganization(organization, argv.interval * 1000, argv.spread);
 });
 
+argv.user.forEach((username) => {
+  scraper.initScrapeUser(username, argv.interval * 1000, argv.spread);
+});
+
 if (argv.repository.length !== 0) {
   scraper.intiScrapeRepositories(argv.repository, argv.interval * 1000, argv.spread);
 }
