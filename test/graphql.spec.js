@@ -1,3 +1,0 @@
-describe('empty test', function () {
-
-});
