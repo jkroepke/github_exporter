@@ -4,7 +4,7 @@
 echo "------ HOOK START - BUILD -------"
 
 docker build \
-  --build-arg VERSION="${DOCKER_TAG/v}" \
+  --build-arg VERSION="$(echo "${DOCKER_TAG}" | sed -e 's/v//g')" \
   --build-arg BUILD_DATE="$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
   --build-arg VCS_REF="${SOURCE_COMMIT}" \
   -f "${DOCKERFILE_PATH}" \
