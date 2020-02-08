@@ -15,6 +15,19 @@
 Export various metrics including insights about github repositories from the GitHub API,
 to a Prometheus compatible endpoint.
 
+## About rate limits and abuse warnings
+
+github_exporter use GitHub [GraphQL API V4](https://developer.github.com/v4/) and [REST API V3](https://developer.github.com/v3/).
+
+Both APIs have a separate rate-limit. By default 5000 requests/hour with an personal access token.
+
+To prevent rate limit or abuse errors I highly recommend to configure a higher scrape interval.
+If you are still in trouble you also should enable the spread parameter to spread requests across the
+scrape interval.
+
+More information:
+* https://developer.github.com/v3/#rate-limiting
+* https://developer.github.com/v4/guides/resource-limitations/
 
 ## Usage
 
