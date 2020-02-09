@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "lint": "standard",
+    "lint": "standard | snazzy",
+    "format": "standard --fix",
     "cm": "npx git-cz",
     "test": "npm run test:unit",
     "test:unit": "mocha",
@@ -84,7 +85,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "npm run lint -- --fix"
+      "npm run format"
     ]
   },
   "standard": {

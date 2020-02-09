@@ -1,4 +1,4 @@
-volumes: 3
+version: '3'
 services:
   github_exporter:
     image: jkroepke/github_exporter
@@ -8,7 +8,7 @@ services:
     networks:
     - github_exporter
     environment:
-      GITHUB_EXPORTER_TOKEN: <secret>
+      GITHUB_EXPORTER_TOKEN: ${GITHUB_EXPORTER_TOKEN}
       GITHUB_EXPORTER_ORGANIZATION: org1,org2
       GITHUB_EXPORTER_USER: user1,user2
       GITHUB_EXPORTER_REPOSITORY: jkroepke/github_exporter,jkroepke/2Moons
