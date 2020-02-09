@@ -12,8 +12,7 @@ const logger = require('./lib/logger')
 const metricsInterval = Prometheus.collectDefaultMetrics()
 
 const server = http.createServer((req, res) => {
-  const path = new URL(req.url).pathname
-  switch (path) {
+  switch (req.url) {
     case '/metrics':
       res.writeHead(200, { 'Content-Type': Prometheus.register.contentType })
       res.write(Prometheus.register.metrics())

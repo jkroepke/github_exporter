@@ -4,7 +4,7 @@
   "description": "Export various metrics including insights about github repositories",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "./index.js",
     "lint": "standard | snazzy",
     "format": "standard --fix",
     "cm": "npx git-cz",
