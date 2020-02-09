@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/jkroepke/github_exporter/compare/v1.4.1...v1.4.2) (2020-02-09)
+
+
+### Bug Fixes
+
+* fix trafic metrics doesnt use latest metrics ([c3fb4f9](https://github.com/jkroepke/github_exporter/commit/c3fb4f9001d904472e7f5dac28889acdd8b152a7))
+
 ## [1.4.1](https://github.com/jkroepke/github_exporter/compare/v1.4.0...v1.4.1) (2020-02-08)
 
 
