@@ -54,7 +54,7 @@ argv.user.forEach((username) => {
 })
 
 if (argv.repository.length !== 0) {
-  scraper.intiScrapeRepositories(argv.repository, argv.interval * 1000, argv.spread)
+  scraper.initScrapeRepositories(argv.repository, argv.interval * 1000, argv.spread)
 }
 
 // Graceful shutdown

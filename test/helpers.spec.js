@@ -45,4 +45,27 @@ describe('helpers', function () {
       )
     })
   })
+
+  describe('#getWeekNumber()', function () {
+    it('same week today', function () {
+      assert.strictEqual(
+        helpers.getWeekNumber(new Date('2020-02-10')),
+        7
+      )
+    })
+
+    it('week end of year', function () {
+      assert.strictEqual(
+        helpers.getWeekNumber(new Date('2020-01-01')),
+        1
+      )
+    })
+
+    it('same week across year', function () {
+      assert.strictEqual(
+        helpers.getWeekNumber(new Date('2020-01-01')),
+        helpers.getWeekNumber(new Date('2019-12-31'))
+      )
+    })
+  })
 })
