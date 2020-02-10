@@ -2,7 +2,7 @@
 
 MKTEMP=$(mktemp)
 
-METRICS="$(curl -s localhost:9171 | grep -E -A1 '(HELP|TYPE)' | grep github)"
+METRICS="$(curl -s localhost:9171/metrics | grep -E -A1 '(HELP|TYPE)' | grep github)"
 
 {
   sed '/## Metrics/q' README.md;
