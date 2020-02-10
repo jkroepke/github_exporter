@@ -5,11 +5,15 @@ ARG VCS_REF=unknown
 ARG BUILD_DATE=unknown
 
 # https://github.com/opencontainers/image-spec/blob/master/annotations.md#pre-defined-annotation-keys
-LABEL org.opencontainers.image.created="${BUILD_DATE}" \
+LABEL name="jkroepke/github_exporter" \
+      maintainer="Jan-Otto Kröpke <github@jkroepke.de>" \
+      description="Export various metrics including insights about github repositories" \
+      url="https://github.com/jkroepke/github_exporter" \
+      org.opencontainers.image.created="${BUILD_DATE}" \
       org.opencontainers.image.authors="Jan-Otto Kröpke <github@jkroepke.de>" \
-      org.opencontainers.image.url="https://hub.docker.com/r/jkroepke/github_exporter" \
+      org.opencontainers.image.url="https://github.com/jkroepke/github_exporter" \
       org.opencontainers.image.version="${VERSION}" \
-      org.opencontainers.image.source="https://hub.docker.com/r/jkroepke/github_exporter" \
+      org.opencontainers.image.source="https://github.com/jkroepke/github_exporter" \
       org.opencontainers.image.revision="${VCS_REF}" \
       org.opencontainers.image.licenses="MIT" \
       org.opencontainers.image.title="jkroepke/github_exporter" \
