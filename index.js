@@ -9,7 +9,7 @@ const { argv } = require('./lib/args')
 const scraper = require('./lib/scraper')
 const logger = require('./lib/logger')
 
-const metricsInterval = Prometheus.collectDefaultMetrics()
+Prometheus.collectDefaultMetrics()
 
 const server = http.createServer((req, res) => {
   switch (req.url) {
@@ -59,8 +59,6 @@ if (argv.repository.length !== 0) {
 
 // Graceful shutdown
 process.on('SIGTERM', () => {
-  clearInterval(metricsInterval)
-
   server.close((err) => {
     if (err) {
       logger.error(`Failed to stop server: ${err.message}`)
