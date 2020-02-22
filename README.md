@@ -107,7 +107,7 @@ A [compose file](./docker-compose.yml) is available, too.
 ```bash
 npm install -g github_exporter
 
-github_exporter --token --repository=kroepke/github_exporter
+github_exporter --token=<GH-Token> --repository=jkroepke/github_exporter
 ```
 
 ## Metrics
