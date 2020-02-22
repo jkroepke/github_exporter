@@ -72,6 +72,7 @@ Log options:
 
 Options:
   --version    Show version number  [boolean]
+  --config     Path to JSON config file
   --token, -t  GitHub Personal access token  [required]
   --help, -h   Show help  [boolean]
 
