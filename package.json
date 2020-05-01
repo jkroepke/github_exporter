@@ -51,26 +51,26 @@
   "homepage": "https://github.com/jkroepke/github_exporter#readme",
   "dependencies": {
     "@octokit/graphql": "^4.3.1",
-    "@octokit/rest": "^17.0.0",
+    "@octokit/rest": "^17.1.4",
     "dotenv": "^8.2.0",
     "prom-client": "^12.0.0",
     "winston": "^3.2.1",
-    "yargs": "^15.1.0"
+    "yargs": "^15.3.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "@semantic-release/changelog": "^5.0.0",
+    "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
-    "commitizen": "^4.0.3",
+    "commitizen": "^4.0.5",
     "cz-conventional-changelog": "^3.1.0",
     "husky": "^4.2.3",
-    "lint-staged": "^10.0.7",
-    "mocha": "^7.0.1",
-    "nyc": "^15.0.0",
+    "lint-staged": "^10.1.1",
+    "mocha": "^7.1.1",
+    "nyc": "^15.0.1",
     "semantic-release": "^17.0.4",
     "snazzy": "^8.0.0",
-    "standard": "^14.3.1"
+    "standard": "^14.3.3"
   },
   "config": {
     "commitizen": {
