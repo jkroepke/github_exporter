@@ -98,7 +98,7 @@ docker run --name github_exporter -d \
     -e GITHUB_EXPORTER_TOKEN=<secret> \
     -e GITHUB_EXPORTER_ORGANIZATION=org1,org2 \
     -e GITHUB_EXPORTER_USER=user1,user2 \
-    -e GITHUB_EXPORTER_REPOSITORY=jkroepke/github_exporter,jkroepke/2Moons \
+    -e GITHUB_EXPORTER_REPOSITORY=jkroepke/github_exporter,jkroepke/helm-secrets,jkroepke/2Moons \
     jkroepke/github-exporter
 ```
 
