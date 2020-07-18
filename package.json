@@ -50,27 +50,27 @@
   },
   "homepage": "https://github.com/jkroepke/github_exporter#readme",
   "dependencies": {
-    "@octokit/graphql": "^4.3.1",
-    "@octokit/rest": "^17.6.0",
+    "@octokit/graphql": "^4.5.2",
+    "@octokit/rest": "^18.0.1",
     "dotenv": "^8.2.0",
     "prom-client": "^12.0.0",
-    "winston": "^3.2.1",
-    "yargs": "^15.3.1"
+    "winston": "^3.3.3",
+    "yargs": "^15.4.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
+    "@commitlint/cli": "^9.1.2",
+    "@commitlint/config-conventional": "^9.1.1",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
-    "commitizen": "^4.0.5",
-    "cz-conventional-changelog": "^3.1.0",
+    "commitizen": "^4.1.2",
+    "cz-conventional-changelog": "^3.2.0",
     "husky": "^4.2.5",
-    "lint-staged": "^10.2.2",
-    "mocha": "^7.1.2",
-    "nyc": "^15.0.1",
-    "semantic-release": "^17.0.7",
+    "lint-staged": "^10.2.11",
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0",
+    "semantic-release": "^17.1.1",
     "snazzy": "^8.0.0",
-    "standard": "^14.3.3"
+    "standard": "^14.3.4"
   },
   "config": {
     "commitizen": {
