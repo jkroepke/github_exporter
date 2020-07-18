@@ -85,4 +85,7 @@ fragment repositoryFragment on Repository {
   vulnerabilityAlerts(first: 0) {
     totalCount
   }
+  collaborators(first: 0) {
+    totalCount
+  }
 }
