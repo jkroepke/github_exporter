@@ -33,7 +33,7 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
-      - uses: paambaati/codeclimate-action@v2.6.0
+      - uses: paambaati/codeclimate-action@v2.7.2
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
