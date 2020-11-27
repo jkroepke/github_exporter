@@ -31,10 +31,8 @@ fragment repositoryFragment on Repository {
     name
   }
   forkCount
+  stargazerCount
   packages(first: 0) {
-    totalCount
-  }
-  stargazers(first: 0) {
     totalCount
   }
   watchers(first: 0) {
