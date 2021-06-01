@@ -30,8 +30,6 @@ jobs:
       - run: npm run lint
       - run: npm run coverage
       - uses: codecov/codecov-action@v1.5.0
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
 
       - uses: paambaati/codeclimate-action@v2.7.5
         env:
