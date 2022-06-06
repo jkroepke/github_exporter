@@ -14,7 +14,8 @@
     "coverage": "npm run coverage:unit && npm run coverage:integration && npm run coverage:report",
     "coverage:unit": "nyc --silent npm run test:unit",
     "coverage:integration": "nyc --silent --no-clean npm run test:integration",
-    "coverage:report": "nyc report --reporter=lcov --reporter=text"
+    "coverage:report": "nyc report --reporter=lcov --reporter=text",
+    "prepare": "husky install"
   },
   "files": [
     "index.js",
@@ -50,37 +51,31 @@
   },
   "homepage": "https://github.com/jkroepke/github_exporter#readme",
   "dependencies": {
-    "@octokit/graphql": "^4.5.7",
-    "@octokit/rest": "^18.0.9",
-    "dotenv": "^8.2.0",
-    "prom-client": "^12.0.0",
-    "winston": "^3.3.3",
-    "yargs": "^16.1.1"
+    "@octokit/graphql": "^4.8.0",
+    "@octokit/rest": "^18.12.0",
+    "dotenv": "^16.0.1",
+    "prom-client": "^14.0.1",
+    "winston": "^3.7.2",
+    "yargs": "^17.5.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
-    "@semantic-release/changelog": "^5.0.1",
-    "@semantic-release/git": "^9.0.0",
-    "commitizen": "^4.2.2",
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
-    "husky": "^4.3.0",
-    "lint-staged": "^10.5.2",
-    "mocha": "^8.2.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.0",
+    "mocha": "^10.0.0",
     "nyc": "^15.1.0",
-    "semantic-release": "^17.3.0",
+    "semantic-release": "^19.0.2",
     "snazzy": "^9.0.0",
-    "standard": "^16.0.3"
+    "standard": "^17.0.0"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {

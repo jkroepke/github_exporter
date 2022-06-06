@@ -15,22 +15,25 @@ const server = http.createServer((req, res) => {
   switch (req.url) {
     case '/metrics':
       res.writeHead(200, { 'Content-Type': Prometheus.register.contentType })
-      res.write(Prometheus.register.metrics())
+      Prometheus.register.metrics().then(str => {
+        res.write(str)
+        res.end()
+      })
       break
     case '/health':
       res.writeHead(200)
       res.write('OK')
+      res.end()
       break
     case '/':
       res.writeHead(302, { Location: '/metrics' })
       res.write('OK')
+      res.end()
       break
     default:
-      res.writeHead(404)
+      res.writeHead(404).end()
       break
   }
-
-  res.end()
 })
 
 server.listen(argv.port, argv.host, (err) => {
