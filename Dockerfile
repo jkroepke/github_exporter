@@ -28,7 +28,7 @@ LABEL name="jkroepke/github_exporter" \
 
 EXPOSE 9171
 
-ENV NODE_ENV=production
+ENV NODE_ENV=production HUSKY=0
 
 WORKDIR /opt/github_exporter
 
