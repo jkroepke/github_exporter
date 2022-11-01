@@ -50,33 +50,36 @@ More information:
 ```
 index.js -t <token> -i 600 [ -s ] [ -l :: ] [ -p 9171 ] [ -o organization ] [ -u user ] [ -r owner/repository ]
 
+Authentication:
+      --auth-strategy  GitHub auth strategy  [required] [choices: "token", "oauth-app", "app", "action"] [default: "token"]
+  -a, --auth           GitHub auth data (e.g.: token)  [required]
+
 Scape settings:
-  --interval, -i  scrape interval  [number] [default: 600]
-  --spread, -s    spread request over interval  [boolean] [default: false]
-  --scraper, -S   enable or disable scraper  [array] [default: ["summarize","extended-summarize","rate-limit","contributors","status","traffic-clones","traffic-top-paths","traffic-top-referrers","traffic-views"]]
+  -i, --interval  scrape interval  [number] [default: 600]
+  -s, --spread    spread request over interval  [boolean] [default: false]
+  -S, --scraper   enable or disable scraper  [array] [default: ["summarize","extended-summarize","rate-limit","contributors","status","traffic-clones","traffic-top-paths","traffic-top-referrers","traffic-views"]]
 
 Scape targets:
-  --organization, -o  GitHub organization to scrape. Can be defined multiple times or comma separated list  [array] [default: []]
-  --user, -u          GitHub users to scrape. Can be defined multiple times or comma separated list  [array] [default: []]
-  --repository, -r    GitHub repositories to scrape. Can be defined multiple times or comma separated list. Format: <owner>/<repo>  [array] [default: []]
+  -o, --organization  GitHub organization to scrape. Can be defined multiple times or comma separated list  [array] [default: []]
+  -u, --user          GitHub users to scrape. Can be defined multiple times or comma separated list  [array] [default: []]
+  -r, --repository    GitHub's repositories to scrape. Can be defined multiple times or comma-separated list. Format: <owner>/<repo>  [array] [default: []]
 
 Bind options:
-  --host      address to bind exporter  [default: "::"]
-  --port, -p  port to bind exporter  [number] [default: 9171]
+      --host  address to bind exporter  [default: "::"]
+  -p, --port  port to bind exporter  [number] [default: 9171]
 
 Log options:
-  --log-level    log level of application  [choices: "error", "warn", "info", "http", "verbose", "debug", "silly"] [default: "info"]
-  --log-file     path to log file
-  --log-console  log to console  [boolean] [default: true]
-  --log-format   log format of application  [default: "cli"]
+      --log-level    log level of application  [choices: "error", "warn", "info", "http", "verbose", "debug", "silly"] [default: "info"]
+      --log-file     path to log file
+      --log-console  log to console  [boolean] [default: true]
+      --log-format   log format of application  [default: "cli"]
 
 Options:
-  --version    Show version number  [boolean]
-  --config     Path to JSON config file
-  --token, -t  GitHub Personal access token  [required]
-  --help, -h   Show help  [boolean]
+      --version  Show version number  [boolean]
+      --config   Path to JSON config file
+  -h, --help     Show help  [boolean]
 
-Environment variable support. Prefix: GITHUB_EXPORTER, e.g. --token == GITHUB_EXPORTER_TOKEN
+Environment variable support. Prefix: GITHUB_EXPORTER, e.g. --auth == GITHUB_EXPORTER_AUTH
 
 for more information, find our manual at https://github.com/jkroepke/github_exporter
 ```
@@ -88,6 +91,42 @@ them in a `.env` file.
 More information about `.env` file:
 - https://github.com/motdotla/dotenv#usage
 
+## Authentication
+
+`github_exporter` supports
+
+* [token](https://github.com/octokit/auth-token.js)
+* [oauth-app](https://github.com/octokit/auth-oauth-app.js)
+* [app](https://github.com/octokit/auth-app.js)
+* [action](https://github.com/octokit/auth-action.js)
+
+authentication types.
+
+### token
+
+Just pass your personal token as an argument
+
+```bash
+github_exporter --auth ghp_xxx
+```
+
+### oauth-app
+
+Pass all properties as JSON object
+
+```bash
+github_exporter --auth-strategy oauth-app --auth '{"clientType": "oauth-app", "clientId": "1234567890abcdef1234", "clientSecret": "1234567890abcdef1234567890abcdef12345678"}'
+```
+
+### app
+
+Pass all properties as JSON object. Authenticate as in app is currently not supported
+
+```bash
+# Authenticate as OAuth App (client ID/client secret)
+github_exporter --auth-strategy app --auth '{"appId": 1, "privateKey": "-----BEGIN PRIVATE KEY-----\n...", "clientId": "1234567890abcdef1234", "clientSecret": "1234567890abcdef1234567890abcdef12345678", "installationId": 123}'
+```
+
 ## Start the exporter
 
 ### Docker:
@@ -95,7 +134,7 @@ More information about `.env` file:
 ```bash
 docker run --name github_exporter -d \
     --restart=always -p 9171:9171 \
-    -e GITHUB_EXPORTER_TOKEN=<secret> \
+    -e GITHUB_EXPORTER_AUTH=<secret> \
     -e GITHUB_EXPORTER_ORGANIZATION=org1,org2 \
     -e GITHUB_EXPORTER_USER=user1,user2 \
     -e GITHUB_EXPORTER_REPOSITORY=jkroepke/github_exporter,jkroepke/helm-secrets,jkroepke/2Moons \
