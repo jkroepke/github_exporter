@@ -83,4 +83,31 @@ fragment repositoryFragment on Repository {
   vulnerabilityAlerts(first: 0) {
     totalCount
   }
+  discussions(first: 0) {
+    totalCount
+  }
+  deployments(first: 0) {
+    totalCount
+  }
+  environments(first: 0) {
+    totalCount
+  }
+  mentionableUsers(first: 0) {
+    totalCount
+  }
+  collaborators(first: 0) {
+    totalCount
+  }
+  milestones(first: 100) {
+    totalCount
+    nodes {
+      number
+      title
+      progressPercentage
+      state
+      issues(first: 0) {
+        totalCount
+      }
+    }
+  }
 }

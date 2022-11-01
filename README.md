@@ -57,7 +57,7 @@ Authentication:
 Scape settings:
   -i, --interval  scrape interval  [number] [default: 600]
   -s, --spread    spread request over interval  [boolean] [default: false]
-  -S, --scraper   enable or disable scraper  [array] [default: ["summarize","extended-summarize","rate-limit","contributors","status","traffic-clones","traffic-top-paths","traffic-top-referrers","traffic-views"]]
+  -S, --scraper   enable or disable scraper  [array] [default: ["collaborators","summarize","rate-limit","contributors","status","traffic-clones","traffic-top-paths","traffic-top-referrers","traffic-views"]]
 
 Scape targets:
   -o, --organization  GitHub organization to scrape. Can be defined multiple times or comma separated list  [array] [default: []]

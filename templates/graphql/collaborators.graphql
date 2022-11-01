@@ -1,0 +1,8 @@
+fragment repositoryFragment on Repository {
+  collaboratorsDirect: collaborators(first: 0, affiliation: DIRECT) {
+    totalCount
+  }
+  collaboratorsOutside: collaborators(first: 0, affiliation: OUTSIDE) {
+    totalCount
+  }
+}
