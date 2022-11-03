@@ -18,7 +18,7 @@ jobs:
         uses: cycjimmy/semantic-release-action@v3
         id: semantic
         with:
-          semantic_version: 16
+          semantic_version: 19
           # you can set branches for semantic-release above v16.
           branches: '["main"]'
         env:
