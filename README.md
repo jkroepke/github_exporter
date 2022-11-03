@@ -153,6 +153,9 @@ github_exporter --token=<GH-Token> --repository=jkroepke/github_exporter
 ## Metrics
 
 ```
+# HELP github_repo_collaborator_total total amount of collaborators for given repository
+# TYPE github_repo_collaborator_total gauge
+github_repo_collaborator_total{owner="jkroepke",repository="jkroepke/github_exporter",affiliation="direct"} 1
 # HELP github_repo_scraped Successfully scraped a repository
 # TYPE github_repo_scraped gauge
 github_repo_scraped{owner="jkroepke",repository="jkroepke/github_exporter"} 1
@@ -173,10 +176,10 @@ github_repo_is_archived{owner="jkroepke",repository="jkroepke/github_exporter"} 
 github_repo_created_at{owner="jkroepke",repository="jkroepke/github_exporter"} 1580644595000
 # HELP github_repo_updated_at repository last update date
 # TYPE github_repo_updated_at gauge
-github_repo_updated_at{owner="jkroepke",repository="jkroepke/github_exporter"} 1582195922000
+github_repo_updated_at{owner="jkroepke",repository="jkroepke/github_exporter"} 1667288697000
 # HELP github_repo_pushed_at repository last push date
 # TYPE github_repo_pushed_at gauge
-github_repo_pushed_at{owner="jkroepke",repository="jkroepke/github_exporter"} 1582244313000
+github_repo_pushed_at{owner="jkroepke",repository="jkroepke/github_exporter"} 1667507246000
 # HELP github_repo_has_issues has repository issues enabled
 # TYPE github_repo_has_issues gauge
 github_repo_has_issues{owner="jkroepke",repository="jkroepke/github_exporter"} 1
@@ -191,99 +194,123 @@ github_repo_has_wiki{owner="jkroepke",repository="jkroepke/github_exporter"} 1
 github_repo_is_template{owner="jkroepke",repository="jkroepke/github_exporter"} 0
 # HELP github_repo_issues_total Issues for given repository
 # TYPE github_repo_issues_total gauge
-github_repo_issues_total{owner="jkroepke",repository="jkroepke/github_exporter",status="open"} 0
+github_repo_issues_total{owner="jkroepke",repository="jkroepke/github_exporter",status="open"} 2
 # HELP github_repo_pull_request_total Pull requests for given repository
 # TYPE github_repo_pull_request_total gauge
-github_repo_pull_request_total{owner="jkroepke",repository="jkroepke/github_exporter",status="open"} 2
+github_repo_pull_request_total{owner="jkroepke",repository="jkroepke/github_exporter",status="open"} 1
 # HELP github_repo_watchers_total Total number of watchers/subscribers for given repository
 # TYPE github_repo_watchers_total gauge
-github_repo_watchers_total{owner="jkroepke",repository="jkroepke/github_exporter"} 1
+github_repo_watchers_total{owner="jkroepke",repository="jkroepke/github_exporter"} 2
 # HELP github_repo_stars_total Total number of Stars for given repository
 # TYPE github_repo_stars_total gauge
-github_repo_stars_total{owner="jkroepke",repository="jkroepke/github_exporter"} 2
+github_repo_stars_total{owner="jkroepke",repository="jkroepke/github_exporter"} 9
 # HELP github_repo_fork_total Total number of forks for given repository
 # TYPE github_repo_fork_total gauge
-github_repo_fork_total{owner="jkroepke",repository="jkroepke/github_exporter"} 1
+github_repo_fork_total{owner="jkroepke",repository="jkroepke/github_exporter"} 3
 # HELP github_repo_commits Total number of commits for given repository
 # TYPE github_repo_commits gauge
-github_repo_commits{owner="jkroepke",repository="jkroepke/github_exporter"} 84
+github_repo_commits{owner="jkroepke",repository="jkroepke/github_exporter"} 0
 # HELP github_repo_tags_total Total number of tags for given repository
 # TYPE github_repo_tags_total gauge
-github_repo_tags_total{owner="jkroepke",repository="jkroepke/github_exporter"} 9
+github_repo_tags_total{owner="jkroepke",repository="jkroepke/github_exporter"} 10
 # HELP github_repo_branches_total Total number of branches for given repository
 # TYPE github_repo_branches_total gauge
-github_repo_branches_total{owner="jkroepke",repository="jkroepke/github_exporter"} 4
+github_repo_branches_total{owner="jkroepke",repository="jkroepke/github_exporter"} 3
 # HELP github_repo_packages Total number of packages for given repository
 # TYPE github_repo_packages gauge
 github_repo_packages{owner="jkroepke",repository="jkroepke/github_exporter"} 0
 # HELP github_repo_downloads Total number of releases for given repository
 # TYPE github_repo_downloads gauge
+github_repo_downloads{owner="jkroepke",repository="jkroepke/helm-secrets",release="v4.1.1",url="https://github.com/jkroepke/helm-secrets/releases/download/v4.1.1/helm-secrets.tar.gz"} 2754
 # HELP github_repo_releases Total number of releases for given repository
 # TYPE github_repo_releases gauge
-github_repo_releases{owner="jkroepke",repository="jkroepke/github_exporter"} 8
+github_repo_releases{owner="jkroepke",repository="jkroepke/github_exporter"} 9
+# HELP github_repo_disk_usage The number of kilobytes this repository occupies on disk.
+# TYPE github_repo_disk_usage gauge
+github_repo_disk_usage{owner="jkroepke",repository="jkroepke/github_exporter"} 1053
+# HELP github_repo_discussions_total Total number of discussions for given repository
+# TYPE github_repo_discussions_total gauge
+github_repo_discussions_total{owner="jkroepke",repository="jkroepke/github_exporter"} 0
+# HELP github_repo_deployments_total Total number of deployments for given repository
+# TYPE github_repo_deployments_total gauge
+github_repo_deployments_total{owner="jkroepke",repository="jkroepke/github_exporter"} 0
+# HELP github_repo_environments_total Total number of deployments for given repository
+# TYPE github_repo_environments_total gauge
+github_repo_environments_total{owner="jkroepke",repository="jkroepke/github_exporter"} 0
+# HELP github_repo_mentionable_users_total Total number of mentionable users for given repository
+# TYPE github_repo_mentionable_users_total gauge
+github_repo_mentionable_users_total{owner="jkroepke",repository="jkroepke/github_exporter"} 2
+# HELP github_repo_collaborators_total Total number of collaborators for given repository
+# TYPE github_repo_collaborators_total gauge
+github_repo_collaborators_total{owner="jkroepke",repository="jkroepke/github_exporter"} 1
+# HELP github_repo_milestones_total Total number of collaborators for given repository
+# TYPE github_repo_milestones_total gauge
+github_repo_milestones_total{owner="jkroepke",repository="jkroepke/github_exporter"} 0
+# HELP github_repo_milestone_percent Percent of milestone inside the given repository
+# TYPE github_repo_milestone_percent gauge
+github_repo_milestone_percent{owner="jkroepke",repository="jkroepke/2Moons",title="1.8",number="1"} 0
+# HELP github_repo_milestone_state State of milestone inside the given repository
+# TYPE github_repo_milestone_state gauge
+github_repo_milestone_state{owner="jkroepke",repository="jkroepke/2Moons",title="1.8",number="1"} 0
+# HELP github_repo_milestone_issues_total Total issue count of milestone inside the given repository
+# TYPE github_repo_milestone_issues_total gauge
+github_repo_milestone_issues_total{owner="jkroepke",repository="jkroepke/2Moons",title="1.8",number="1"} 0
 # HELP github_repo_vulnerabilities_total vulnerabilities for given repository
 # TYPE github_repo_vulnerabilities_total gauge
-github_repo_vulnerabilities_total{owner="jkroepke",repository="jkroepke/github_exporter"} 0
+github_repo_vulnerabilities_total{owner="jkroepke",repository="jkroepke/github_exporter"} 26
 # HELP github_repo_languages_size return repo size by langauges for given repository
 # TYPE github_repo_languages_size gauge
-github_repo_languages_size{owner="jkroepke",repository="jkroepke/github_exporter",language="JavaScript"} 40506
-# HELP github_repo_size_kb size for given repository
-# TYPE github_repo_size_kb gauge
-github_repo_size_kb{owner="jkroepke",repository="jkroepke/github_exporter"} 1208
-# HELP github_repo_network_total network size for given repository
-# TYPE github_repo_network_total gauge
-github_repo_network_total{owner="jkroepke",repository="jkroepke/github_exporter"} 1
+github_repo_languages_size{owner="jkroepke",repository="jkroepke/github_exporter",language="JavaScript"} 40596
 # HELP github_rate_limit_limit GitHub API rate limit limit
 # TYPE github_rate_limit_limit gauge
 github_rate_limit_limit{api="core"} 5000
 # HELP github_rate_limit_remaining GitHub API rate limit remaining
 # TYPE github_rate_limit_remaining gauge
-github_rate_limit_remaining{api="core"} 4796
+github_rate_limit_remaining{api="core"} 2144
 # HELP github_rate_limit_reset GitHub API rate limit reset
 # TYPE github_rate_limit_reset gauge
-github_rate_limit_reset{api="core"} 1582329277
+github_rate_limit_reset{api="core"} 1667510585
 # HELP github_repo_contributors Total number of releases for given repository
 # TYPE github_repo_contributors gauge
-github_repo_contributors{owner="jkroepke",repository="jkroepke/github_exporter"} 3
+github_repo_contributors{owner="jkroepke",repository="jkroepke/github_exporter"} 4
 # HELP github_repo_status status for the default branch for given repository
 # TYPE github_repo_status gauge
-github_repo_status{owner="jkroepke",repository="jkroepke/github_exporter",context="codecov/patch"} 0
 # HELP github_repo_traffic_clones Total number of clones for given repository
 # TYPE github_repo_traffic_clones gauge
-github_repo_traffic_clones{owner="jkroepke",repository="jkroepke/github_exporter",week="latest"} 16
+github_repo_traffic_clones{owner="jkroepke",repository="jkroepke/helm-secrets",week="latest"} 21421
 # HELP github_repo_traffic_unique_clones Total number of clones for given repository
 # TYPE github_repo_traffic_unique_clones gauge
-github_repo_traffic_unique_clones{owner="jkroepke",repository="jkroepke/github_exporter",week="latest"} 8
+github_repo_traffic_unique_clones{owner="jkroepke",repository="jkroepke/helm-secrets",week="latest"} 10131
 # HELP github_repo_traffic_clones_avg Avenge number of clones for given repository
 # TYPE github_repo_traffic_clones_avg gauge
-github_repo_traffic_clones_avg{owner="jkroepke",repository="jkroepke/github_exporter"} 163
+github_repo_traffic_clones_avg{owner="jkroepke",repository="jkroepke/helm-secrets"} 59436
 # HELP github_repo_traffic_unique_clones_avg Avenge number of clones for given repository
 # TYPE github_repo_traffic_unique_clones_avg gauge
-github_repo_traffic_unique_clones_avg{owner="jkroepke",repository="jkroepke/github_exporter"} 24
+github_repo_traffic_unique_clones_avg{owner="jkroepke",repository="jkroepke/helm-secrets"} 27127
 # HELP github_repo_traffic_popular_content_views Total views from top 10 content for given repository
 # TYPE github_repo_traffic_popular_content_views gauge
-github_repo_traffic_popular_content_views{owner="jkroepke",repository="jkroepke/github_exporter",path="/jkroepke/github_exporter"} 11
+github_repo_traffic_popular_content_views{owner="jkroepke",repository="jkroepke/2Moons",path="/jkroepke/2Moons"} 116
 # HELP github_repo_traffic_popular_content_unique_vistors Total unique views from top 10 content for given repository
 # TYPE github_repo_traffic_popular_content_unique_vistors gauge
-github_repo_traffic_popular_content_unique_vistors{owner="jkroepke",repository="jkroepke/github_exporter",path="/jkroepke/github_exporter"} 5
+github_repo_traffic_popular_content_unique_vistors{owner="jkroepke",repository="jkroepke/2Moons",path="/jkroepke/2Moons"} 78
 # HELP github_repo_traffic_referring_sites_views Total views from top 10 referrer for given repository
 # TYPE github_repo_traffic_referring_sites_views gauge
-github_repo_traffic_referring_sites_views{owner="jkroepke",repository="jkroepke/github_exporter",referrer="github.com"} 17
+github_repo_traffic_referring_sites_views{owner="jkroepke",repository="jkroepke/helm-secrets",referrer="Google"} 2129
 # HELP github_repo_traffic_referring_sites_unique_vistors Total unique visitors from top 10 referrers for given repository
 # TYPE github_repo_traffic_referring_sites_unique_vistors gauge
-github_repo_traffic_referring_sites_unique_vistors{owner="jkroepke",repository="jkroepke/github_exporter",referrer="github.com"} 3
+github_repo_traffic_referring_sites_unique_vistors{owner="jkroepke",repository="jkroepke/helm-secrets",referrer="Google"} 798
 # HELP github_repo_traffic_views Total views from top 10 content for given repository
 # TYPE github_repo_traffic_views gauge
-github_repo_traffic_views{owner="jkroepke",repository="jkroepke/github_exporter",week="latest"} 27
+github_repo_traffic_views{owner="jkroepke",repository="jkroepke/github_exporter",week="latest"} 41
 # HELP github_repo_traffic_unique_vistors Total unique views from top 10 content for given repository
 # TYPE github_repo_traffic_unique_vistors gauge
-github_repo_traffic_unique_vistors{owner="jkroepke",repository="jkroepke/github_exporter",week="latest"} 4
+github_repo_traffic_unique_vistors{owner="jkroepke",repository="jkroepke/github_exporter",week="latest"} 5
 # HELP github_repo_traffic_views_avg Avenge views from top 10 content for given repository
 # TYPE github_repo_traffic_views_avg gauge
-github_repo_traffic_views_avg{owner="jkroepke",repository="jkroepke/github_exporter"} 37
+github_repo_traffic_views_avg{owner="jkroepke",repository="jkroepke/github_exporter"} 76
 # HELP github_repo_traffic_unique_vistors_avg Avenge unique views from top 10 content for given repository
 # TYPE github_repo_traffic_unique_vistors_avg gauge
-github_repo_traffic_unique_vistors_avg{owner="jkroepke",repository="jkroepke/github_exporter"} 7
+github_repo_traffic_unique_vistors_avg{owner="jkroepke",repository="jkroepke/github_exporter"} 10
 ```
 
 ## Contributing
