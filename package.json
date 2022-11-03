@@ -1,6 +1,6 @@
 {
   "name": "github_exporter",
-  "version": "1.6.4",
+  "version": "1.6.5",
   "description": "Export various metrics including insights about github repositories",
   "main": "index.js",
   "scripts": {
@@ -100,9 +100,12 @@
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
       "@semantic-release/npm",
-      ["@semantic-release/git", {
-        "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
-      }],
+      [
+        "@semantic-release/git",
+        {
+          "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
+        }
+      ],
       "@semantic-release/github"
     ]
   }
