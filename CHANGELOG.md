@@ -1,5 +1,28 @@
 # [1.6.0](https://github.com/jkroepke/github_exporter/compare/v1.5.0...v1.6.0) (2022-11-03)
 
+
+### Bug Fixes
+
+* ci ([1e26f1f](https://github.com/jkroepke/github_exporter/commit/1e26f1fe437117613daa4eb8658450daba51c6d0))
+* ci ([3f66215](https://github.com/jkroepke/github_exporter/commit/3f6621510fa0ad51f61106ae7841183cf85c0b48))
+* ci ([04f3cb1](https://github.com/jkroepke/github_exporter/commit/04f3cb1b6f3e14f9719d705e1e1f024018359c48))
+* ci ([1b0963b](https://github.com/jkroepke/github_exporter/commit/1b0963b23bdde93d57803afeec6e97d229d180b2))
+* ci ([fb39919](https://github.com/jkroepke/github_exporter/commit/fb39919efbe1943309377aadfb4b9a86c3ba319e))
+* ci ([35070c8](https://github.com/jkroepke/github_exporter/commit/35070c8d974749440f6bf31a285a63f41290364d))
+* ci ([77c295a](https://github.com/jkroepke/github_exporter/commit/77c295a9ec12fb51cdf88244066489a70492e85c))
+* ci ([fba9ce0](https://github.com/jkroepke/github_exporter/commit/fba9ce059caf674b91b709a48f4b4369f3bdd39f))
+* ci ([ee4caca](https://github.com/jkroepke/github_exporter/commit/ee4cacaeb15f1a10e9b54a6ea74c07c03417ed00))
+* **ci:** docker builds ([99cc21c](https://github.com/jkroepke/github_exporter/commit/99cc21c2b6dd708fca769015935b0c78a51e8878))
+* husky ([646c3ac](https://github.com/jkroepke/github_exporter/commit/646c3ac49564f71f05a12227c46c980200997ee8))
+
+
+### Features
+
+* implement collaborators ([1e2b0c0](https://github.com/jkroepke/github_exporter/commit/1e2b0c040d68d9daeb2532a059002198b2098fc8))
+* implement multiple auth strategies ([7101509](https://github.com/jkroepke/github_exporter/commit/7101509bd397454a3f37f39454428e8ede425eaa))
+
+# [1.6.0](https://github.com/jkroepke/github_exporter/compare/v1.5.0...v1.6.0) (2022-11-03)
+
 #### Features
 
 * Use node 18 as default
