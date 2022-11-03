@@ -14,7 +14,8 @@
     "coverage": "npm run coverage:unit && npm run coverage:integration && npm run coverage:report",
     "coverage:unit": "nyc --silent npm run test:unit",
     "coverage:integration": "nyc --silent --no-clean npm run test:integration",
-    "coverage:report": "nyc report --reporter=lcov --reporter=text"
+    "coverage:report": "nyc report --reporter=lcov --reporter=text",
+    "prepare": "husky install"
   },
   "files": [
     "index.js",
