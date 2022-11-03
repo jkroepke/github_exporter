@@ -1,6 +1,6 @@
 {
   "name": "github_exporter",
-  "version": "1.6.5",
+  "version": "1.6.6",
   "description": "Export various metrics including insights about github repositories",
   "main": "index.js",
   "scripts": {

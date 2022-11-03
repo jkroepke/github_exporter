@@ -1,3 +1,10 @@
+## [1.6.6](https://github.com/jkroepke/github_exporter/compare/v1.6.5...v1.6.6) (2022-11-03)
+
+
+### Bug Fixes
+
+* remove strict flags from args parse ([31d826c](https://github.com/jkroepke/github_exporter/commit/31d826c69872a956a7cc3a1609c75d498568a69d))
+
 ## [1.6.5](https://github.com/jkroepke/github_exporter/compare/v1.6.4...v1.6.5) (2022-11-03)
 
 
