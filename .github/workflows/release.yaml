@@ -1,4 +1,6 @@
 name: Release
+env:
+  HUSKY: "0"
 on:
   workflow_dispatch:
   repository_dispatch:
@@ -11,7 +13,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
-      - run: npm ci
+      - run: npm ci --ignore-scripts
       - run: npm run lint
       - run: npm run test
       - name: Release
