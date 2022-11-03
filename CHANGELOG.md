@@ -1,3 +1,11 @@
+## [1.6.2](https://github.com/jkroepke/github_exporter/compare/v1.6.1...v1.6.2) (2022-11-03)
+
+
+### Bug Fixes
+
+* **ci:** docker builds again ([4fbd8bf](https://github.com/jkroepke/github_exporter/commit/4fbd8bf3c62d7f621f0c2d9a14935bf5e1a533b5))
+* **ci:** docker builds again ([2d11fb6](https://github.com/jkroepke/github_exporter/commit/2d11fb617d19008066ce1070aac1b0a28567b5cc))
+
 ## [1.6.1](https://github.com/jkroepke/github_exporter/compare/v1.6.0...v1.6.1) (2022-11-03)
 
 
