@@ -1,4 +1,4 @@
-# [2.0.0](https://github.com/jkroepke/github_exporter/compare/v1.5.0...v2.0.0) (2022-11-03)
+# [1.6.0](https://github.com/jkroepke/github_exporter/compare/v1.5.0...v1.6.0) (2022-11-03)
 
 #### Features
 
