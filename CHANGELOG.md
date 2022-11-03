@@ -1,3 +1,24 @@
+# [2.0.0](https://github.com/jkroepke/github_exporter/compare/v1.5.0...v2.0.0) (2022-11-03)
+
+#### Features
+
+* Use node 18 as default
+* Added metric `github_repo_collaborator_total`
+* Added metric `github_repo_disk_usage`
+* Added metric `github_repo_discussions_total`
+* Added metric `github_repo_deployments_total`
+* Added metric `github_repo_environments_total`
+* Added metric `github_repo_mentionable_users_total`
+* Added metric `github_repo_collaborators_total`
+* Added metric `github_repo_milestones_total`
+* Added metric `github_repo_milestone_percent`
+* Added metric `github_repo_milestone_state`
+* Added metric `github_repo_milestone_issues_total`
+* Remove metric `github_repo_size_kb`
+* Remove metric `github_repo_network_total`
+* Support GitHub app auth
+* Support GitHub oauth app auth
+
 # [1.5.0](https://github.com/jkroepke/github_exporter/compare/v1.4.2...v1.5.0) (2022-10-14)
 
 
