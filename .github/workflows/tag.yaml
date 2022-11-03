@@ -1,4 +1,4 @@
-name: Release
+name: Docker Images
 env:
   HUSKY: "0"
 on:
