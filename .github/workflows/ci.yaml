@@ -31,7 +31,7 @@ jobs:
       - run: npm run coverage
       - uses: codecov/codecov-action@v3.1.1
 
-      - uses: paambaati/codeclimate-action@v3.2.0
+      - uses: paambaati/codeclimate-action@v4.0.0
         env:
           CC_TEST_REPORTER_ID: ea7e35af85b163d05f0240108a534011277cb5fc759eabd6e15afed1636d945c
         with:
