@@ -1,3 +1,11 @@
+## [1.6.7](https://github.com/jkroepke/github_exporter/compare/v1.6.6...v1.6.7) (2023-09-24)
+
+
+### Bug Fixes
+
+* **ci:** fix node version ([d2b8915](https://github.com/jkroepke/github_exporter/commit/d2b89157ec4e0f24d74fe352a2cf8eecd8bce280))
+* popular content and referrer views metrics ([#158](https://github.com/jkroepke/github_exporter/issues/158)) ([40ee233](https://github.com/jkroepke/github_exporter/commit/40ee233af0666d7318546c4913c8b356f391401c))
+
 ## [1.6.6](https://github.com/jkroepke/github_exporter/compare/v1.6.5...v1.6.6) (2022-11-03)
 
 
