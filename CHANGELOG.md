@@ -1,3 +1,15 @@
+# [1.7.0](https://github.com/jkroepke/github_exporter/compare/v1.6.7...v1.7.0) (2023-09-24)
+
+
+### Bug Fixes
+
+* **ci:** docker flow ([4ab4da3](https://github.com/jkroepke/github_exporter/commit/4ab4da37c73c026937f6d1e762bb75f22d59bab1))
+
+
+### Features
+
+* bump dependencies ([6188b14](https://github.com/jkroepke/github_exporter/commit/6188b14c1b1452b956e279a49843740a65ed1c83))
+
 ## [1.6.7](https://github.com/jkroepke/github_exporter/compare/v1.6.6...v1.6.7) (2023-09-24)
 
 
