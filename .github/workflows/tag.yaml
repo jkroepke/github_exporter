@@ -19,7 +19,7 @@ jobs:
 
       - name: Set up Docker Build Metadata
         id: docker_meta
-        uses: docker/metadata-action@v4
+        uses: docker/metadata-action@v5
         with:
           images: jkroepke/github_exporter
           flavor: |
