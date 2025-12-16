@@ -11,10 +11,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/jkroepke/github_exporter?logo=docker)](https://hub.docker.com/r/jkroepke/github_exporter)
 [![Docker Stars](https://img.shields.io/docker/stars/jkroepke/github_exporter?logo=docker)](https://hub.docker.com/r/jkroepke/github_exporter)
 
-[![dependencies Status](https://david-dm.org/jkroepke/github_exporter/status.svg)](https://david-dm.org/jkroepke/github_exporter)
-[![devDependencies Status](https://david-dm.org/jkroepke/github_exporter/dev-status.svg)](https://david-dm.org/jkroepke/github_exporter?type=dev)
 [![Known Vulnerabilities](https://snyk.io/test/github/jkroepke/github_exporter/badge.svg?targetFile=package.json)](https://snyk.io/test/github/jkroepke/github_exporter?targetFile=package.json)
-[![Maintainability](https://api.codeclimate.com/v1/badges/c0b5bc1d4725a1b6bd8c/maintainability)](https://codeclimate.com/github/jkroepke/github_exporter/maintainability)
 [![codecov](https://codecov.io/gh/jkroepke/github_exporter/branch/master/graph/badge.svg)](https://codecov.io/gh/jkroepke/github_exporter)
 
 # github_exporter

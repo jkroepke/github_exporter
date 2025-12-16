@@ -31,13 +31,6 @@ jobs:
       - run: npm run coverage
       - uses: codecov/codecov-action@v5.5.1
 
-      - uses: paambaati/codeclimate-action@v9.0.0
-        env:
-          CC_TEST_REPORTER_ID: ea7e35af85b163d05f0240108a534011277cb5fc759eabd6e15afed1636d945c
-        with:
-          coverageCommand: npm run coverage
-          debug: true
-
   docker:
     runs-on: ubuntu-latest
     steps:
