@@ -1,6 +1,7 @@
 /*
-!/index.js
+!/index.ts
 !/package*.json
+!/tsconfig.json
 !/LICENSE
 !/lib
 !/templates

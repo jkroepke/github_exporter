@@ -1,8 +1,10 @@
+node_modules/
+dist/
+.tsbuildinfo
+.env
 .idea/
 *.iml
 node_modules
 .vscode/
-.env
-
-.nyc_output/
+.nyc_output
 coverage/
