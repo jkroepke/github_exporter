@@ -74,7 +74,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "mocha": "^10.2.0",
-    "nyc": "^15.1.0",
+    "nyc": "^17.0.0",
     "semantic-release": "^22.0.5",
     "snazzy": "^9.0.0",
     "standard": "^17.1.0"
