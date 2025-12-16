@@ -61,7 +61,7 @@
     "dotenv": "^17.0.0",
     "prom-client": "^15.0.0",
     "winston": "^3.10.0",
-    "yargs": "^17.7.2"
+    "yargs": "^18.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.0.0",
