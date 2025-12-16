@@ -6,7 +6,7 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "npm run build && node dist/index.js",
-    "lint": "standard | snazzy",
+    "lint": "prettier '**/*.{ts,json}'",
     "format": "prettier --write '**/*.{ts,json}'",
     "cm": "npx git-cz",
     "test": "npm run test:unit",
