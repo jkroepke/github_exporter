@@ -1,3 +1,19 @@
+# [1.8.0](https://github.com/jkroepke/github_exporter/compare/v1.7.0...v1.8.0) (2025-12-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency dotenv to v17 ([#214](https://github.com/jkroepke/github_exporter/issues/214)) ([d955ccc](https://github.com/jkroepke/github_exporter/commit/d955ccca0fb4c7a92104ce70745abbb97a53c022))
+* **deps:** update dependency prom-client to v15 ([#215](https://github.com/jkroepke/github_exporter/issues/215)) ([b303ac1](https://github.com/jkroepke/github_exporter/commit/b303ac125f32f7e60f6d0c20e25b0d7b5fa84a7f))
+* **deps:** update octokit monorepo ([#217](https://github.com/jkroepke/github_exporter/issues/217)) ([5c0005b](https://github.com/jkroepke/github_exporter/commit/5c0005bb3f4080e9569090c1e67a90118fe5dc4d))
+
+
+### Features
+
+* migrate to typescript ([06924cf](https://github.com/jkroepke/github_exporter/commit/06924cf0360d43a697f004dfed9467d8684f6a6c))
+* migrate to typescript ([44dda3a](https://github.com/jkroepke/github_exporter/commit/44dda3a2e0a37c912416c719a3c3e11d32d30540))
+* migrate to typescript ([672a12b](https://github.com/jkroepke/github_exporter/commit/672a12bf72657eadc0beac9c5c59dfa7f231b53c))
+
 # [1.7.0](https://github.com/jkroepke/github_exporter/compare/v1.6.7...v1.7.0) (2023-09-24)
 
 
