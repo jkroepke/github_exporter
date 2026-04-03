@@ -39,7 +39,8 @@
     "exactOptionalPropertyTypes": false,
     "skipLibCheck": true,
     "incremental": true,
-    "tsBuildInfoFile": ".tsbuildinfo"
+    "tsBuildInfoFile": ".tsbuildinfo",
+    "types": ["mocha"]
   },
   "include": ["lib/**/*", "scripts/**/*", "index.ts", "**/*.ts"],
   "exclude": ["node_modules", "dist"]
